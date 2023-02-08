@@ -1,0 +1,51 @@
+h1 {
+  text-align: center;
+}
+
+.span {
+  background-color: #e0e0e0;
+  padding: .2em 1em;
+  border-radius: 5px;
+}
+
+mat-toolbar{
+  display: flex;
+  width: 100%;
+}
+
+.btnDiv {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+button {
+  margin-left: 10px;
+}
+
+:host /deep/ router-outlet + app-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1.2em 0;
+}
+
+:host /deep/ router-outlet + app-crud {
+  display: flex;
+  justify-content: center;
+}
+
+:host /deep/ router-outlet + app-detail {
+  height: 92vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+:host /deep/ router-outlet + app-cart {
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

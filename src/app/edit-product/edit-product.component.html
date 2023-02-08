@@ -1,0 +1,37 @@
+<h2>Editar producto</h2>
+
+<form [formGroup]="editForm" method="post">
+    
+  <mat-form-field appearance="fill">
+    <input matInput type="text" formControlName="name" placeholder="Nombre">
+    <mat-hint *ngIf="validInput('name')">
+      *Requerido
+    </mat-hint>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field appearance="fill">
+    <input matInput type="text" formControlName="description" placeholder="Descripción">
+    <mat-hint *ngIf="validInput('description')">
+      *Requerido
+    </mat-hint>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field appearance="fill">
+    <input matInput type="number" formControlName="price" placeholder="Precio">
+    <mat-hint *ngIf="validInput('price')">
+      *Requerido, precio >= 0
+    </mat-hint>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field appearance="fill">
+    <input matInput type="text" formControlName="image" placeholder="Imagen">
+    <mat-hint *ngIf="validInput('image')">
+      *Requerido
+    </mat-hint>
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" (click)="editProduct()">Editar</button>
+</form>

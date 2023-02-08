@@ -1,0 +1,114 @@
+.container {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* LEFT */
+
+.tabDiv {
+  width: 50%;
+  height: 10%;
+}
+
+.cards {
+  display: flex;
+  margin: .5em;
+}
+
+.numbers {
+  display: flex;
+}
+
+.header {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+.imgDiv {
+  width: 25%;
+  display: flex;
+  padding: .5em;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+.priceDiv {
+  height: 100%;
+  display: flex;
+}
+
+.price {
+  width: 100%;
+  text-align: center;
+  align-self: center;
+  font-size: 2em;
+  padding-top: 10px;
+}
+
+.numbers{
+  display: flex;
+  justify-content: center;
+}
+
+span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 2em;
+  font-weight: 400;
+}
+
+/* RIGHT */
+
+.totDiv {
+  width: 40%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.tottxt {
+  font-size: 3.5em;
+  margin: 1em 0;
+}
+
+.totnum {
+  font-size: 2.2em;
+  margin-top: 1.5em;
+}
+
+.buybtn {
+  width: 40%;
+  height: 3em;
+  font-size: 1.5em;
+  margin: 1em 0;
+}
+
+.clearbtn {
+  width: 30%;
+  margin-bottom: 1em;
+}
+
+.calctotal {
+  margin-top: 3em;
+}

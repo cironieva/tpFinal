@@ -1,0 +1,15 @@
+<a *ngFor="let e of productList" href="detail/{{e.id}}">
+  <mat-card>
+    
+    <img mat-card-image src="{{e.image}}" onerror="this.onerror=null;this.src='https://www.freeiconspng.com/thumbs/guitar-icon-png/guitar-icon-png-21.png';">
+    
+    <mat-card-header>
+      {{e.name}}
+    </mat-card-header>
+
+    <mat-card-content>
+      $ {{e.price}}
+    </mat-card-content>
+    
+  </mat-card>
+</a>

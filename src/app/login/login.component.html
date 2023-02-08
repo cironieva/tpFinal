@@ -1,0 +1,26 @@
+<h2>Iniciar Sesión</h2>
+<form [formGroup]="loginForm" method="post">
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" formControlName="email" name="email">
+    <mat-hint *ngIf="validInput('email')">
+      *Email no válido
+    </mat-hint>
+  </mat-form-field>
+  <br>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Contraseña</mat-label>
+    <input matInput type="password" formControlName="password" name="password">
+    <mat-hint *ngIf="validInput('password')">
+      *Mínimo 8 caracteres
+    </mat-hint>
+  </mat-form-field>
+  <br>
+  
+  <p *ngIf="dataFinal">El usuario y la contraseña no coinciden</p>
+
+  <button mat-raised-button color="warn" (click)="onLogin()" class="loginButton">Iniciar Sesión</button>
+
+</form>

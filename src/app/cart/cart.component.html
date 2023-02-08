@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="tabDiv">
+    <mat-card *ngFor="let element of parsedCart; let i = index" class="cards">
+      
+      <div class="header">
+        {{element.name}}
+      </div>
+
+      <div class="content">
+        <div class="imgDiv">
+          <img src="{{element.image}}">
+        </div>
+        
+        <div class="contDiv">
+          
+          <div class="numbers">
+            <button mat-raised-button (click)="subOne(element)">-1</button>
+            <span>{{element.quant}}</span>
+            <button mat-raised-button (click)="addOne(element)">+1</button>
+          </div>
+          
+          <div class="priceDiv">
+            <p id="{{ 'price' + i }}" class="price">{{element.price * element.quant}}</p>
+          </div>
+          
+        </div>
+      </div>
+    </mat-card>
+  </div>
+
+  <mat-card class="totDiv">
+    <!-- <p class="tottxt">TOTAL</p> -->
+    <button mat-raised-button (click)="totalPrice()" class="calctotal">Calcular total</button>
+    <p class="totnum">$ {{finalPrice}}</p>
+    <button mat-raised-button color="accent" (click)="buy()" class="buybtn">COMPRAR</button>
+    <button mat-raised-button color="primary" (click)="cleanCart()" class="clearbtn">VACIAR CARRITO</button>
+  </mat-card>
+</div>

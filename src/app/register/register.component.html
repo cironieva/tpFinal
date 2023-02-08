@@ -1,0 +1,36 @@
+<h2>Registrarse</h2>
+<form [formGroup]="registerForm" method="post">
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input matInput type="name" formControlName="name" name="name">
+    <mat-hint *ngIf="validInput('name')">
+      *Requerido
+    </mat-hint>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" formControlName="email" name="email">
+    <mat-hint *ngIf="validInput('email')">
+      *Email no válido
+    </mat-hint>
+  </mat-form-field>
+  <br>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Contraseña</mat-label>
+    <input matInput type="password" formControlName="password" name="password">
+    <mat-hint *ngIf="validInput('password')">
+      *Mínimo 8 caracteres
+    </mat-hint>
+  </mat-form-field>
+  <br>
+  
+  <p *ngIf="error">Email ya registrado: <br>Inicia sesión</p>
+
+  <button mat-raised-button color="primary" (click)="onRegister()">Registrarse</button>
+  <p class="p">Si ya tenés cuenta:</p>
+  <button mat-raised-button color="warn" (click)="onLogin()">Iniciar Sesión</button>
+</form>

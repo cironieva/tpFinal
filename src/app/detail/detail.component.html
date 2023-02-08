@@ -1,0 +1,15 @@
+<div class="container">
+  
+  <div class="imgDiv">
+    <img src="{{productSelected.image}}" onerror="this.onerror=null;this.src='https://www.freeiconspng.com/thumbs/guitar-icon-png/guitar-icon-png-21.png';">
+  </div>
+  
+  <div class="txtDiv">
+    <h2 class="title">{{productSelected.name}}</h2>
+    <p class="desc">{{productSelected.description}}</p>
+    <p class="price">$ {{productSelected.price}}</p>
+
+    <button mat-raised-button color="primary" id="btn" (click)="addToCart()">AGREGAR AL CARRITO</button>
+  </div>
+
+</div>
